@@ -1,1 +1,6 @@
-# COMP382-Assignment03
+# **COMP382-Assignment03**
+## **Team Members: Gurveer, Harjot, Inder, Leo, Sahil**
+## **Project Description**
+This project explores the NP-completeness of SAT through the Cook–Levin framework by taking a 3SAT instance with k=8
+k=8 clauses, transforming it into an equivalent CLIQUE problem, and then solving the resulting graph problem. The program will construct the graph exactly as described in the reduction: each clause becomes a partite set of literal-vertices, and edges are added only between non-conflicting literals from different clauses. It will then search for an 8-clique, which corresponds to selecting one mutually consistent literal from each clause.
+If an 8-clique is found, the project will convert that clique back into a satisfying truth assignment for the original 3SAT formula and verify the result by showing that every clause evaluates to true. If no such clique exists, the program will report that there is no solution. Alongside the implementation, the project will also include a short research component highlighting resources on computational complexity, using SAT as the central starting point for understanding NP-complete problems and reductions to other hard problems like CLIQUE
