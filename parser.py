@@ -7,10 +7,10 @@ def change_string( literal: str) -> str:
     if lit.startswith("-"):
         lit = "~" + lit[1:]
 
-    if re.fullmatch(r"x\d+", lit):
+    if re.fullmatch(r"[xX]\d+", lit):
         return lit
     
-    if re.fullmatch(r"~x\d+", lit):
+    if re.fullmatch(r"~[xX]\d+", lit):
         return lit
     
     raise ValueError(f"Invalid literal format: {literal}")
