@@ -1,11 +1,13 @@
-from parser import parse_3sat_formula
-
+from parser import parse_3sat_formula, is_negated
 
 
 def build_assignment(clique):
     assignment = {}
 
-    for(_, (var, isNeg)) in clique:
+    for(literal, clause_index) in clique:
+        var = parse_3sat_formula(literal)
+        isNeg = is_negated(literal)
+
         value = not isNeg
 
         if var in assignment and assignment[var] != value:
@@ -15,9 +17,6 @@ def build_assignment(clique):
 
         return assignment
     
-
-
-
 
 
 if __name__ == "__main__":
