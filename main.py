@@ -1,5 +1,6 @@
 from parser import parse_3sat_formula, is_negated
-
+from reduction import create_vertices, create_graph
+from clique_solver import find_k_clique ##Partner can change variable once they finish
 
 def build_assignment(clique):
     assignment = {}
@@ -24,4 +25,8 @@ if __name__ == "__main__":
 
     clauses = parse_3sat_formula(formula_text, expected_k=8)
 
-    print(clauses)
+    print("Parsed clauses:" , clauses)
+    
+
+
+
