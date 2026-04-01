@@ -40,6 +40,7 @@ def create_graph(vertices):
     for x in range(len(vertices)):
         vert1 = vertices[x]
         x1, cl_num1 = vertices[x]
+
         for y in range(x+1, len(vertices)):
             vert2 = vertices[y]
             x2, cl_num2 = vertices[y]
@@ -61,8 +62,13 @@ def create_graph(vertices):
 #     print("no conflict")
 
 
-arr = [["X1","~X2","X3"],["~X1","X3","X5"],["~X2","X6","X8"],["X1","X9","X16"]]
-vert_arr = create_vertices(arr)
+#arr = [["X1","~X2","X3"],["~X1","X3","X5"],["~X2","X6","X8"],["X1","X9","X16"]]
 
-print(create_graph(vert_arr))
+def convert_to_clique(cl_array):
+    vert_arr = create_vertices(arr)
+    clique = create_graph(vert_arr)
+
+    return clique
+
+#print(create_graph(vert_arr))
 
