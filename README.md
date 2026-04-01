@@ -18,11 +18,14 @@ This project explores the NP-completeness of SAT through the Cook–Levin framew
 - SAT is a satisfiable Boolean formula like the example shown above
 - It is made up variables or literals like x1, x2, etc
 - A group of literals forms a clause like (x1 ∨ x2)
-
-### **2.3 3SAT**
 - A Boolean formula is in conjunctive normal form or cnf-formula when several clauses are connected with ANDs
 - Where a 3SAT is a 3cnf-formula, 3SAT = { ⟨φ⟩ | φ is a satisfiable 3CNF formula }  where essentially all the clauses are going to have three literals like (x1 ∨ x2 ∨ x3) ∧ (¬x1 ∨ x2 ∨ x4) ∧ (x2 ∨ ¬x3 ∨ x5) ∧ ...
-- For our instance it is a 3SAT with k=8 so there will be eight clauses in total with each having three literals 
+
+
+### **2.3 Our Problem**
+- For our instance it is a 3SAT with k=8 so there will be eight clauses in total with each having three literals
+- An example input would something like this:
+(x1 v x2 v x3) ^ (~x1 v x4 v x5) ^ (x2 v ~x3 v x6) ^ (x1 v x5 v ~x6) ^ (~x2 v x3 v x7) ^ (x4 v ~x5 v x8) ^ (x6 v x7 v ~x8) ^ (~x1 v ~x4 v x8)
 
 
 
