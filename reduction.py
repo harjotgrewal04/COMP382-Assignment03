@@ -65,7 +65,7 @@ def create_graph(vertices):
 #arr = [["X1","~X2","X3"],["~X1","X3","X5"],["~X2","X6","X8"],["X1","X9","X16"]]
 
 def convert_to_clique(cl_array):
-    vert_arr = create_vertices(arr)
+    vert_arr = create_vertices(cl_array)
     clique = create_graph(vert_arr)
 
     return clique
