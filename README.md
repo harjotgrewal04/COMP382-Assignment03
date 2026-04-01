@@ -12,7 +12,18 @@ This project explores the NP-completeness of SAT through the Cook–Levin framew
 - True is represented by 1 | False is represented by 0
 - Boolean operations include AND,  OR, and NOT through symbols like ∧, ∨, ¬ respectively
 - A Boolean formula is an expression which combines the Boolean variables and operations: (x1 ∨ x2) ∧ ¬x1 | Which essentially reads x1 OR x2 and not x1
-- This is satisfiable if we can make the formula evaluate to 1. In this example above you could set x1=0, x2=1 and ¬x1 would therefore be 1 giving you 1 so it is satisfiable 
+- This is satisfiable if we can make the formula evaluate to 1. In this example above you could set x1=0, x2=1 and ¬x1 would therefore be 1 giving you 1 so it is satisfiable
+
+### **2.2 Boolean Satisfiability Problem**
+- SAT is a satisfiable Boolean formula like the example shown above
+- It is made up variables or literals like x1, x2, etc
+- A group of literals forms a clause like (x1 ∨ x2)
+
+### **2.3 3SAT**
+- A Boolean formula is in conjunctive normal form or cnf-formula when several clauses are connected with ANDs
+- Where a 3SAT is a 3cnf-formula, 3SAT = { ⟨φ⟩ | φ is a satisfiable 3CNF formula }  where essentially all the clauses are going to have three literals like (x1 ∨ x2 ∨ x3) ∧ (¬x1 ∨ x2 ∨ x4) ∧ (x2 ∨ ¬x3 ∨ x5) ∧ ...
+- For our instance it is a 3SAT with k=8 so there will be eight clauses in total with each having three literals 
+
 
 
 
