@@ -26,6 +26,21 @@ if __name__ == "__main__":
     clauses = parse_3sat_formula(formula_text, expected_k=8)
 
     print("Parsed clauses:" , clauses)
+
+
+    ##Inder's Part
+    if clique:
+        print("\nClique found: ")
+        for node in clique:
+            print(node)
+
+        assignment = build_assignment(clique)
+
+        print("\nAssignment:")
+        for var, val in assignment.items():
+            print(f"{var} = {val}")
+    else:
+        print("no solution")
     
 
 
