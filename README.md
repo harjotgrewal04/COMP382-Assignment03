@@ -35,7 +35,10 @@ This project explores the NP-completeness of SAT through the Cook–Levin framew
 ### **3.2 SAT --> Clique**
 
 
-
+## **Dependencies**
+The following python dependencies are needed:
+- networkx
+- matplotlib
 
 
 
