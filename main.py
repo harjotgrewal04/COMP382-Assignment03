@@ -1,4 +1,4 @@
-from parser import parse_3sat_formula, is_negated
+from parser import parse_3sat_formula, is_negated, variable_name
 from reduction import convert_to_clique, draw_clique_graph #converts clauses array to a dictionary clique and draws graph
 from clique_solver import find_k_clique ##Partner can change variable once they finish
 
@@ -17,8 +17,31 @@ def build_assignment(clique):
         assignment[var] = value
 
         return assignment
-    
 
+def verify_solution(clauses, assignment):
+    # assume whole formula is satisfied
+    allLiteralsSatisfied = True
+
+    # loop through each clause numbering them from 1
+    for i, clause in enumerate(clauses, start=1):
+
+        satisfied_literals = [];
+
+        # check each literal inside the current clause
+        for literal in clause:
+
+            # get variable name from literal and check if its negative
+            var = variable_name(literal)
+            neg = is_negated(literal)
+
+            # evaluate literal using assignment
+            if neg:
+                value = not assignment[var]
+            else:
+                value = assignment[var]
+
+            if value:
+                satisfied_literals.append(literal)
 
 if __name__ == "__main__":
     formula_text = input("Enter 3SAT Formula: ")

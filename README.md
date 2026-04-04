@@ -41,4 +41,8 @@ The following python dependencies are needed:
 - matplotlib
 
 
+## **References** 
 
+- Gurveer
+  jeandoe123. (2019, April 18). 3SAT_Problem. Kaggle. https://www.kaggle.com/code/jeandoe123/3sat-problem
+  Kelson. (2021, March 8). Boolean satisfiability problem Checker. Kelson Martins. https://iamkel.dev/sat-problem-checker/ 
