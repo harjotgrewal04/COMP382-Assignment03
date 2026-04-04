@@ -41,7 +41,7 @@ This project explores the NP-completeness of SAT through the Cook–Levin framew
 
 
 ## **Dependencies**
-The following python dependencies are needed:
+The following python dependencies are needed (pip install):
 - networkx
 - matplotlib
 
