@@ -1,6 +1,5 @@
 from parser import parse_3sat_formula, is_negated, variable_name
 from reduction import convert_to_clique, draw_clique_graph #converts clauses array to a dictionary clique and draws graph
-from clique_solver import find_k_clique ##Partner can change variable once they finish
 
 def build_assignment(clique):
     assignment = {}
@@ -43,6 +42,22 @@ def verify_solution(clauses, assignment):
             if value:
                 satisfied_literals.append(literal)
 
+        # if one literal is true then the whole clause is true because of 'OR'
+        if satisfied_literals:
+            print("C", i, ":", clause, " -> true")
+        # if no literals were true then the whole clause is false
+        else:
+            print("C", i, ":", clause, " -> false")
+            allLiteralsSatisfied = False
+
+    #print result
+    if allLiteralsSatisfied:
+        print("All clauses satisfied, valid solution")
+    else:
+        print("Not all clauses are satisfied")
+
+    return allLiteralsSatisfied
+
 if __name__ == "__main__":
     formula_text = input("Enter 3SAT Formula: ")
 
@@ -50,22 +65,14 @@ if __name__ == "__main__":
 
     print("Parsed clauses:" , clauses)
 
-    # hardcoding test for part 5 until part 3 and 4 are done
-    test_clauses = [
-        ["x1", "x2", "x3"],
-        ["~x1", "x2", "x4"],
-        ["x1", "~x2", "x5"],
-        ["x2", "x3", "~x4"],
-        ["~x3", "x4", "x6"],
-        ["x1", "~x5", "x6"],
-        ["~x2", "x5", "x6"],
-        ["x3", "~x4", "~x6"]
-    ]
-
     test_assignment = {
         "x1": True, "x2": True, "x3": True,
         "x4": False, "x5": True, "x6": True,
+        "x7": False, "x8": True
     }
+
+    verify_solution(clauses, test_assignment)
+
     
 
 
