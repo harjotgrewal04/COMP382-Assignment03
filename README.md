@@ -51,6 +51,6 @@ Harjot:
 - Sipser, M. (2013). Introduction to the theory of computation. Course Technology Cengage Learning.<br>
 - NetworkX Development Team. (2024). NetworkX - Tutorial: Drawing graphs. NetworkX. https://networkx.org/documentation/stable/tutorial.html#drawing-graphs<br>
 
-- Gurveer:<br>
+Gurveer:
 - jeandoe123. (2019, April 18). 3SAT_Problem. Kaggle. https://www.kaggle.com/code/jeandoe123/3sat-problem<br>
 - Kelson. (2021, March 8). Boolean satisfiability problem Checker. Kelson Martins. https://iamkel.dev/sat-problem-checker/<br>
