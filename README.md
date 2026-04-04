@@ -32,8 +32,17 @@ This project explores the NP-completeness of SAT through the Cook–Levin framew
 - A set of vertices (nodes) in a undirected graph where each pair of vertices has an edge connecting them
 - If there are 3 nodes: A, B, C | There would be a connecting edge between all so: A-B, B-C, A-C forming a K3
 
-### **3.2 SAT --> Clique**
+### **3.2 Converting SAT --> Clique**
+- For each literal there must be a node
+- A k-clique is found by picking a vertex from every clause and choose non-complements
+- Two vertices are connected based on two rules:
+    1. Vertices are from different clauses
+    2. They are not contradictory (x1 and ~x1)
 
+
+## **4. References**
+- Patel, P. (2024, September 30). NP-Completeness - Priya Patel - Medium. Medium. https://medium.com/@learning3601/np-completeness-c1de865b2b60
+‌- Sipser, M. (2013). Introduction to the theory of computation. Course Technology Cengage Learning.
 
 ## **Dependencies**
 The following python dependencies are needed:
