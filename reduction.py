@@ -57,13 +57,6 @@ def create_graph(vertices):
     return graph
 
 
-# checking = is_literal_conflict("~X2","~X2")
-# if checking:
-#     print("there is conflict between ~X2 and ~X2")
-# else:
-#     print("no conflict")
-
-
 # can be called and it converts the input to clique
 def convert_to_clique(cl_array):
     vert_arr = create_vertices(cl_array)
@@ -84,11 +77,3 @@ def draw_clique_graph(clique):
 
     nx.draw(G, layout, with_labels=True, node_color="lightblue", node_size=3000, edge_color="gray")
     plt.show()
-
-
-
-# example to test
-#arr = [["X1","~X2","X3"],["~X1","X3","X5"],["~X2","X6","X8"],["X1","X9","X16"],["X2","~X4","X12"],["X10","~X2","X1"],["~X1","X19","X7"],["X11","~X12","X10"]]
-
-# unprint both the example and this print statement to test
-#print(convert_to_clique(arr))

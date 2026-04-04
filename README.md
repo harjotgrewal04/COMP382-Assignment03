@@ -40,14 +40,15 @@ This project explores the NP-completeness of SAT through the Cook–Levin framew
     2. They are not contradictory (x1 and ~x1)
 
 
-## **4. References**
-- Patel, P. (2024, September 30). NP-Completeness - Priya Patel - Medium. Medium. https://medium.com/@learning3601/np-completeness-c1de865b2b60
-‌- Sipser, M. (2013). Introduction to the theory of computation. Course Technology Cengage Learning.
-
 ## **Dependencies**
 The following python dependencies are needed:
 - networkx
 - matplotlib
+
+## **4. References**
+- Patel, P. (2024, September 30). NP-Completeness - Priya Patel - Medium. Medium. https://medium.com/@learning3601/np-completeness-c1de865b2b60<br>
+‌- Sipser, M. (2013). Introduction to the theory of computation. Course Technology Cengage Learning.<br>
+- NetworkX Development Team. (2024). NetworkX - Tutorial: Drawing graphs. NetworkX. https://networkx.org/documentation/stable/tutorial.html#drawing-graphs<br>
 
 
 ## **References** 
