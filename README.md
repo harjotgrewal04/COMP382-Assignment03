@@ -46,13 +46,11 @@ The following python dependencies are needed (pip install):
 - matplotlib
 
 ## **4. References**
+Harjot: 
 - Patel, P. (2024, September 30). NP-Completeness - Priya Patel - Medium. Medium. https://medium.com/@learning3601/np-completeness-c1de865b2b60<br>
-‌- Sipser, M. (2013). Introduction to the theory of computation. Course Technology Cengage Learning.<br>
+- Sipser, M. (2013). Introduction to the theory of computation. Course Technology Cengage Learning.<br>
 - NetworkX Development Team. (2024). NetworkX - Tutorial: Drawing graphs. NetworkX. https://networkx.org/documentation/stable/tutorial.html#drawing-graphs<br>
 
-
-## **References** 
-
-- Gurveer:
-- jeandoe123. (2019, April 18). 3SAT_Problem. Kaggle. https://www.kaggle.com/code/jeandoe123/3sat-problem
-- Kelson. (2021, March 8). Boolean satisfiability problem Checker. Kelson Martins. https://iamkel.dev/sat-problem-checker/ 
+- Gurveer:<br>
+- jeandoe123. (2019, April 18). 3SAT_Problem. Kaggle. https://www.kaggle.com/code/jeandoe123/3sat-problem<br>
+- Kelson. (2021, March 8). Boolean satisfiability problem Checker. Kelson Martins. https://iamkel.dev/sat-problem-checker/<br>
