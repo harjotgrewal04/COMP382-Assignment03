@@ -65,6 +65,8 @@ if __name__ == "__main__":
 
     print("Parsed clauses:" , clauses)
 
+    clique = convert_to_clique(clauses)
+
     test_assignment = {
         "x1": True, "x2": True, "x3": True,
         "x4": False, "x5": True, "x6": True,
@@ -73,7 +75,8 @@ if __name__ == "__main__":
 
     verify_solution(clauses, test_assignment)
 
-    
+    # should run last. Displays the clique graph
+    #draw_clique_graph(clique)
 
 
 
