@@ -1,4 +1,7 @@
 import parser as ps
+import networkx as nx
+import matplotlib.pyplot as plt
+
 # the clauses array should look like: clauses = [["x1","~x2","x3"],["~x1","x6","x4"],...]
 
 # Creates an array that holds each literal and its respective clause number
@@ -7,11 +10,9 @@ def create_vertices(clauses):
     clause_index = 0
 
     for clause in clauses:
-        literal_index = 0
 
         for literal in clause:                              
-            vertices.append((literal,clause_index))
-            literal_index += 1
+            vertices.append((literal,clause_index))    
 
         clause_index += 1
 
@@ -40,29 +41,39 @@ def create_graph(vertices):
     for x in range(len(vertices)):
         vert1 = vertices[x]
         x1, cl_num1 = vertices[x]
+
         for y in range(x+1, len(vertices)):
             vert2 = vertices[y]
             x2, cl_num2 = vertices[y]
+            
             if cl_num1 == cl_num2:
                 continue
             if is_literal_conflict(x1,x2):
                 continue
 
-            graph[vert1].add(x2)
-            graph[vert2].add(x1)
+            graph[vert1].add(vert2)
+            graph[vert2].add(vert1)
 
     return graph
 
 
-# checking = is_literal_conflict("~X2","~X2")
-# if checking:
-#     print("there is conflict between ~X2 and ~X2")
-# else:
-#     print("no conflict")
+# can be called and it converts the input to clique
+def convert_to_clique(cl_array):
+    vert_arr = create_vertices(cl_array)
+    clique = create_graph(vert_arr)
+
+    return clique
 
 
-arr = [["X1","~X2","X3"],["~X1","X3","X5"],["~X2","X6","X8"],["X1","X9","X16"]]
-vert_arr = create_vertices(arr)
+# draws the graph (needs both networkx and matplotlib dependencies to work). Also need to first convert clauses to clique, then pass the dictionary to this function.
+def draw_clique_graph(clique):
 
-print(create_graph(vert_arr))
+    G = nx.Graph()
+    for key, values in clique.items():
+        for v in values:
+            G.add_edge(key, v)
 
+    layout = nx.spring_layout(G)
+
+    nx.draw(G, layout, with_labels=True, node_color="lightblue", node_size=3000, edge_color="gray")
+    plt.show()
