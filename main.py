@@ -1,5 +1,6 @@
 from parser import parse_3sat_formula, is_negated, variable_name
 from reduction import convert_to_clique, draw_clique_graph #converts clauses array to a dictionary clique and draws graph
+from clique_solver import find_clique
 
 def build_assignment(clique):
     assignment = {}
