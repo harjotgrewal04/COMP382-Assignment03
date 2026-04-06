@@ -59,6 +59,15 @@ This project explores the NP-completeness of SAT through the Cook–Levin framew
 3. If all clauses are satisfied, the assignment is valid to be the orignal 3SAT instance solution
 
 ## **5. Complexity Difficulty**
+**NP-Complete**
+    SAT is NP-complete. NP complete is part of the Nondeterministic Polynomial Time class which means that anything that falls under this, the solution can be verified in polynomial time but there is not efficient solution known. If one NP-Complete problem solution can be found then we can say we can find the solution to any NP-Complete problem. Some instances of NP-Complete are the SAT question, and the Knapsack problem. SAT is the first problem proven to be NP-Complete through the Cook-Levin Theorem.
+
+**NP-Hard**
+    Moving on from NP-Complete there is NP-Hard which is essentially when a every problem in NP can be reduced to it in polynomial time. However unlike NP-Complete and P NP-Hard does not necessarily have to be in NP, it just states that it is at least as hard as everything in NP. Some problems include Chess, the Travelling Salesman problem and the Halting Problem. 
+
+**NP & P**
+    NP problems allow for you to not only solve a problem quickly or efficiently but you can also verify the solution quickly as well. Everything in P and NP-Complete is also in P. In P everything is solvable fast and efficiently like some problems, 2SAT, Sorting and also things like the Shortest problems path.
+
 
 
 
@@ -68,10 +77,4 @@ This project explores the NP-completeness of SAT through the Cook–Levin framew
 - NetworkX Development Team. (2024). NetworkX - Tutorial: Drawing graphs. NetworkX. https://networkx.org/documentation/stable/tutorial.html#drawing-graphs<br>
 - jeandoe123. (2019, April 18). 3SAT_Problem. Kaggle. https://www.kaggle.com/code/jeandoe123/3sat-problem<br>
 - Kelson. (2021, March 8). Boolean satisfiability problem Checker. Kelson Martins. https://iamkel.dev/sat-problem-checker/<br>
-
-
-
-## **Dependencies**
-The following python dependencies are needed (pip install):
-- networkx
-- matplotlib
+- Rorschach. (2024, September 18). Exploring the Concepts and Applications of Boolean Satisfiability. Medium. https://medium.com/@0x_Rorschach/exploring-the-concepts-and-applications-of-boolean-satisfiability-90d255a81878
