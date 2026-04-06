@@ -39,11 +39,23 @@ This project explores the NP-completeness of SAT through the Cook–Levin framew
     1. Vertices are from different clauses
     2. They are not contradictory (x1 and ~x1)
 
-## **4. Complexity Difficulty**
+## **4 What is the process of converting back to 3SAT instance**
+
+## **4.1 Converting clique to assignment**
+- Once 8-clique is determined, the selected literals are converted into a truth assignment for the original 3SAT problem
+- Positive literal = true variable & negative literal = false variable
+
+## **4.2 Solution verification**
+- The assignment made is used to evaluate each clause in original 3SAT formula
+1. Clause is satisfied when at least one literal is true
+2. Program executes statement whether each clause is true or false
+3. If all clauses are satisfied, the assignment is valid to be the orignal 3SAT instance solution
+
+## **5. Complexity Difficulty**
 
 
 
-## **5. References**
+## **6. References**
 - Patel, P. (2024, September 30). NP-Completeness - Priya Patel - Medium. Medium. https://medium.com/@learning3601/np-completeness-c1de865b2b60<br>
 - Sipser, M. (2013). Introduction to the theory of computation. Course Technology Cengage Learning.<br>
 - NetworkX Development Team. (2024). NetworkX - Tutorial: Drawing graphs. NetworkX. https://networkx.org/documentation/stable/tutorial.html#drawing-graphs<br>
