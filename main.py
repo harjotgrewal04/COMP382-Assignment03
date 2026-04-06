@@ -96,10 +96,14 @@ if __name__ == "__main__":
             print(node)
 
         assignment = build_assignment(clique)
+        assignment = complete_assignment(clauses, assignment)
 
         print("\nAssignment:")
         for var, val in assignment.items():
             print(f"{var} = {val}")
+
+        print();
+        verify_solution(clauses, assignment)
     else:
         print("no solution")
 
