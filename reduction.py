@@ -2,8 +2,6 @@ import parser as ps
 import networkx as nx
 import matplotlib.pyplot as plt
 
-# the clauses array should look like: clauses = [["x1","~x2","x3"],["~x1","x6","x4"],...]
-
 # Creates an array that holds each literal and its respective clause number
 def create_vertices(clauses):
     vertices = []
@@ -18,7 +16,7 @@ def create_vertices(clauses):
 
     return vertices
 
-# checks if a literal is a compliment of the other (ex. X1 and ~X1) if it is, thne there is a conflict
+# checks if a literal is a compliment of the other (ex. X1 and ~X1) if it is, then there is a conflict
 def is_literal_conflict(literal1,literal2):
 
     v1 = ps.variable_name(literal1)
@@ -31,7 +29,7 @@ def is_literal_conflict(literal1,literal2):
     else:
         return False
 
-# creates a dictionary that holds the tuple as a key (ex. ("X1",0)) and the pair is every vertice that is connected to this vertice
+# creates a dictionary that holds tuples from vertices array as keys (ex. ("X1",0)) and values are every other tuple that can form an edge with a key
 def create_graph(vertices):
     graph = {}
     
@@ -65,7 +63,7 @@ def convert_to_clique(cl_array):
     return clique
 
 
-# draws the graph (needs both networkx and matplotlib dependencies to work). Also need to first convert clauses to clique, then pass the dictionary to this function.
+# draws the graph (needs both networkx and matplotlib dependencies to work). Also need to first convert clauses to clique, then pass the clique to this function.
 def draw_clique_graph(clique):
 
     G = nx.Graph()
