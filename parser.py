@@ -8,10 +8,10 @@ def change_string( literal: str) -> str:
         lit = "~" + lit[1:]
 
     if re.fullmatch(r"[xX]\d+", lit):
-        return lit
-    
+        return lit.lower()
+
     if re.fullmatch(r"~[xX]\d+", lit):
-        return lit
+        return lit.lower()
     
     raise ValueError(f"Invalid literal format: {literal}")
 
@@ -21,7 +21,7 @@ def is_negated(literal: str) -> bool:
 
 def variable_name(literal: str) -> str:
     literal = change_string(literal)
-    return literal[1:] if literal.startswith("~") else literal
+    return literal[1:] if literal.startswith("~") else literal.lower()
 
 def parse_clause(clause_text: str) -> list[str]:
     
@@ -76,13 +76,13 @@ def parse_3sat_formula(formula_text: str, expected_k: int | None = None) -> list
 
 if __name__ == "__main__":
     example = """
-    (x1 v x2 v x3) ^
+    (X1 or x2 or x3) ^
     (~x1 v x2 v x4) ^
     (x1 v ~x2 v x5) ^
-    (x2 v x3 v ~x4) ^
-    (~x3 v x4 v x6) ^
+    (x2 v x3 v -x4) ^
+    (~x3 v x4 OR x6) ^
     (x1 v ~x5 v x6) ^
-    (~x2 v x5 v x6) ^
+    (~x2 OR x5 v x6) ^
     (x3 v ~x4 v ~x6)
     """
 
