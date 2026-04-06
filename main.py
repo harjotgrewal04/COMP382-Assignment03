@@ -1,5 +1,5 @@
 from parser import parse_3sat_formula, is_negated
-from reduction import create_vertices, create_graph
+from reduction import convert_to_clique #converts clauses array to a dictionary clique
 from clique_solver import find_k_clique ##Partner can change variable once they finish
 
 def build_assignment(clique):

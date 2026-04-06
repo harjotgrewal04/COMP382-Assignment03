@@ -7,11 +7,9 @@ def create_vertices(clauses):
     clause_index = 0
 
     for clause in clauses:
-        literal_index = 0
 
         for literal in clause:                              
-            vertices.append((literal,clause_index))
-            literal_index += 1
+            vertices.append((literal,clause_index))    
 
         clause_index += 1
 
@@ -44,6 +42,7 @@ def create_graph(vertices):
         for y in range(x+1, len(vertices)):
             vert2 = vertices[y]
             x2, cl_num2 = vertices[y]
+            
             if cl_num1 == cl_num2:
                 continue
             if is_literal_conflict(x1,x2):
@@ -61,16 +60,16 @@ def create_graph(vertices):
 # else:
 #     print("no conflict")
 
-# example to test
-#arr = [["X1","~X2","X3"],["~X1","X3","X5"],["~X2","X6","X8"],["X1","X9","X16"],["X2","~X4","X12"],["X10","~X2","X1"],["~X1","X19","X7"],["X11","~X12","X10"]]
 
-
+# can be called and it converts the input to clique
 def convert_to_clique(cl_array):
     vert_arr = create_vertices(cl_array)
     clique = create_graph(vert_arr)
 
     return clique
 
+# example to test
+#arr = [["X1","~X2","X3"],["~X1","X3","X5"],["~X2","X6","X8"],["X1","X9","X16"],["X2","~X4","X12"],["X10","~X2","X1"],["~X1","X19","X7"],["X11","~X12","X10"]]
 
 # unprint both the example and this print statement to test
-#print(convert_to_clique(arr))
+# print(convert_to_clique(arr))
