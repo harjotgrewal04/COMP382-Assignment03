@@ -2,7 +2,7 @@
 
 ## **Team Members: Gurveer, Harjot, Inder, Leo, Sahil**
 
-## ** Startup Steps**
+## **Startup Steps**
 1. Create a virutal environment - python3 -m venv venv
 2. Activate virtual environment - source venv/bin/activate
 3. Download the dependencies - pip install -r requirements.txt
