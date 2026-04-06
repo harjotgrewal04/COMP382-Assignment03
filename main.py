@@ -5,8 +5,8 @@ from clique_solver import find_clique
 def build_assignment(clique):
     assignment = {}
 
-    for(literal, clause_index) in clique:
-        var = parse_3sat_formula(literal)
+    for (literal, clause_index) in clique:
+        var = variable_name(literal)   
         isNeg = is_negated(literal)
 
         value = not isNeg
@@ -16,7 +16,7 @@ def build_assignment(clique):
         
         assignment[var] = value
 
-        return assignment
+    return assignment  
 
 def verify_solution(clauses, assignment):
     # assume whole formula is satisfied
@@ -66,9 +66,14 @@ if __name__ == "__main__":
 
     print("Parsed clauses:" , clauses)
 
-<<<<<<< HEAD
 
-    ##Inder's Part
+    # Converting to a clique graph
+    clique_graph = convert_to_clique(clauses)
+    
+    # Finding an 8-clique
+    clique = find_clique(clique_graph)
+
+    # Process of building an assignment by converting selection of nodes back to a solution of the original input 3SAT instance
     if clique:
         print("\nClique found: ")
         for node in clique:
@@ -82,8 +87,6 @@ if __name__ == "__main__":
     else:
         print("no solution")
     
-=======
-    clique = convert_to_clique(clauses)
 
     test_assignment = {
         "x1": True, "x2": True, "x3": True,
@@ -95,7 +98,7 @@ if __name__ == "__main__":
 
     # should run last. Displays the clique graph. Needs the dependencies installed in order to work.
     #draw_clique_graph(clique)
->>>>>>> cfa0a08144494ed3db674034e9597e9847e595b6
+
 
 
 
