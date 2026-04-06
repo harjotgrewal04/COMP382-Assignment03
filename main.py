@@ -96,8 +96,7 @@ if __name__ == "__main__":
 
     verify_solution(clauses, test_assignment)
 
-    # should run last. Displays the clique graph. Needs the dependencies installed in order to work.
-    #draw_clique_graph(clique)
+    draw_clique_graph(clique_graph)
 
 
 
