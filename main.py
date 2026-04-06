@@ -59,6 +59,22 @@ def verify_solution(clauses, assignment):
 
     return allLiteralsSatisfied
 
+def complete_assignment(clauses, assignment):
+    # make copy so original is not changed
+    completed = assignment.copy();
+
+    # loop through each clause then through each literal
+    for clause in clauses:
+        for literal in clause:
+            var = variable_name(literal)
+            # if variable not already in assignment give default value False
+            if var not in completed:
+                completed[var] = False
+
+    return completed
+
+
+
 if __name__ == "__main__":
     formula_text = input("Enter 3SAT Formula: ")
 
@@ -86,15 +102,6 @@ if __name__ == "__main__":
             print(f"{var} = {val}")
     else:
         print("no solution")
-    
-
-    test_assignment = {
-        "x1": True, "x2": True, "x3": True,
-        "x4": False, "x5": True, "x6": True,
-        "x7": False, "x8": True
-    }
-
-    verify_solution(clauses, test_assignment)
 
     draw_clique_graph(clique_graph)
 
