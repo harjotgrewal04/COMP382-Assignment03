@@ -78,3 +78,7 @@ This project explores the NP-completeness of SAT through the Cook–Levin framew
 - jeandoe123. (2019, April 18). 3SAT_Problem. Kaggle. https://www.kaggle.com/code/jeandoe123/3sat-problem<br>
 - Kelson. (2021, March 8). Boolean satisfiability problem Checker. Kelson Martins. https://iamkel.dev/sat-problem-checker/<br>
 - Rorschach. (2024, September 18). Exploring the Concepts and Applications of Boolean Satisfiability. Medium. https://medium.com/@0x_Rorschach/exploring-the-concepts-and-applications-of-boolean-satisfiability-90d255a81878
+
+
+## **6.1 AI Usage**
+- Gemini 3 pro - used to check work and help optimize code for clique_solver.py
